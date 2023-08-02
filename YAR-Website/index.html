@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Website Title</title>
+  <title>York Aerospace and Rocketry</title>
   <style>
     body {
       margin: 0;
@@ -19,8 +19,23 @@
       width: 100%;
     }
 
+    .logo {
+      width: 50px; /* Adjust the width of the logo as needed */
+      margin-right: 10px; /* Add some spacing between the logo and links */
+    }
+
+    .links {
+      display: flex; /* Use flexbox to horizontally align the links */
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px; /* Add some spacing between the links */
+    }
+
     .content {
-      margin-top: 40px; /* Add some margin to push the content below the fixed banner */
+      margin-top: 60px; /* Add some margin to push the content below the fixed banner */
       color: white; /* Set the text color to white for better visibility */
       padding: 20px;
     }
@@ -28,21 +43,54 @@
 </head>
 <body>
   <div class="red-banner">
-    <a href="#section1">Section 1</a> |
-    <a href="#section2">Section 2</a> |
-    <a href="#section3">Section 3</a>
-  </div>
+    <a href="#top"> <!-- Add this anchor tag around the logo -->
+    <img class="logo" src="YAR Monochrome.png" alt="Logo">
+    <div class="links">
+    <a href="#section1">About Us</a> 
+    <a href="#section2">Our Journey</a> 
+    <a href="#section3">Prior Launches</a> 
+    <a href="#section4">Current Committee</a> 
+    <a href="#section5">Where Next?</a> 
+    <a href="#section6">Roles</a> 
+    <a href="#section7">Sponsors</a> 
+    </div>
+</div>
+
   <div class="content">
     <!-- Your website content goes here -->
-    <h2 id="section1">Section 1</h2>
+    <h2 id="section1">About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+    <h2 id="section2">Our Journey</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-    <h2 id="section2">Section 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-    <h2 id="section3">Section 3</h2>
+    <h2 id="section3">Prior Launches</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <!-- Add more content as needed -->
+
+    <h2 id="section1">Current Committee</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <h2 id="section2">Where Next?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <h2 id="section3">Roles</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <h2 id="section3">Sponsors</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
+  <script>
+    // Add JavaScript to apply the 3D scrolling effect when scrolling
+    const content = document.querySelector(".content");
+
+    window.addEventListener("scroll", () => {
+      // Calculate the amount of scroll and apply the 3D effect accordingly
+      const scrollAmount = window.scrollY;
+      const rotateAmount = scrollAmount / 10; // Adjust this value for the desired 3D effect
+      content.style.transform = `perspective(800px) translateY(-${rotateAmount}px) rotateX(5deg)`;
+    });
+  </script>
+
 </body>
 </html>
